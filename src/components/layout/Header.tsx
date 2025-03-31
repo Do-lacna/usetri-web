@@ -1,28 +1,31 @@
-
 import React, { useState, useEffect } from 'react';
 import { cn } from '@/lib/utils';
 import { Menu, X } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+import { useTranslation } from 'react-i18next';
 
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const { i18n } = useTranslation();
 
   // Track scroll position for header styling
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 10);
     };
-    
+
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
   return (
-    <header 
+    <header
       className={cn(
         'fixed top-0 left-0 right-0 z-50 transition-all duration-300 py-4 px-4 sm:px-6',
-        isScrolled ? 'bg-white/80 backdrop-blur-lg shadow-sm' : 'bg-transparent'
+        isScrolled
+          ? 'bg-white/80 backdrop-blur-lg shadow-sm'
+          : 'bg-transparent',
       )}
     >
       <div className="max-w-7xl mx-auto flex items-center justify-between">
@@ -35,23 +38,37 @@ const Header = () => {
 
         {/* Desktop Navigation */}
         <nav className="hidden md:flex items-center space-x-8">
-          <a href="#features" className="text-foreground hover:text-brand-accent transition-colors">
+          <a
+            href="#features"
+            className="text-foreground hover:text-brand-accent transition-colors"
+          >
             Features
           </a>
-          <a href="#how-it-works" className="text-foreground hover:text-brand-accent transition-colors">
+          <a
+            href="#how-it-works"
+            className="text-foreground hover:text-brand-accent transition-colors"
+          >
             How It Works
           </a>
-          <a href="#premium" className="text-foreground hover:text-brand-accent transition-colors">
+          <a
+            href="#premium"
+            className="text-foreground hover:text-brand-accent transition-colors"
+          >
             Premium
           </a>
           <Button className="bg-brand-dark text-white hover:bg-brand-accent hover:text-brand-dark transition-all">
             Download App
           </Button>
+          <select onChange={(e) => i18n.changeLanguage(e.target.value)}>
+            <option value="en">English</option>
+
+            <option value="sk">Slovensky</option>
+          </select>
         </nav>
 
         {/* Mobile Menu Button */}
-        <button 
-          className="md:hidden text-foreground" 
+        <button
+          className="md:hidden text-foreground"
           onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
           aria-label="Toggle menu"
         >
@@ -63,28 +80,28 @@ const Header = () => {
       {mobileMenuOpen && (
         <div className="md:hidden absolute top-full left-0 right-0 bg-white/95 backdrop-blur-lg shadow-lg animate-slide-down">
           <div className="px-4 py-6 space-y-4">
-            <a 
-              href="#features" 
+            <a
+              href="#features"
               className="block py-2 text-foreground hover:text-brand-accent transition-colors"
               onClick={() => setMobileMenuOpen(false)}
             >
               Features
             </a>
-            <a 
-              href="#how-it-works" 
+            <a
+              href="#how-it-works"
               className="block py-2 text-foreground hover:text-brand-accent transition-colors"
               onClick={() => setMobileMenuOpen(false)}
             >
               How It Works
             </a>
-            <a 
-              href="#premium" 
+            <a
+              href="#premium"
               className="block py-2 text-foreground hover:text-brand-accent transition-colors"
               onClick={() => setMobileMenuOpen(false)}
             >
               Premium
             </a>
-            <Button 
+            <Button
               className="w-full bg-brand-dark text-white hover:bg-brand-accent hover:text-brand-dark transition-all"
               onClick={() => setMobileMenuOpen(false)}
             >
