@@ -19,6 +19,10 @@ const Header = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+  const changeLanguage = (lng: string) => {
+    i18n.changeLanguage(lng);
+  };
+
   return (
     <header
       className={cn(
@@ -59,11 +63,16 @@ const Header = () => {
           <Button className="bg-brand-dark text-white hover:bg-brand-accent hover:text-brand-dark transition-all">
             Download App
           </Button>
-          <select onChange={(e) => i18n.changeLanguage(e.target.value)}>
-            <option value="en">English</option>
-
-            <option value="sk">Slovensky</option>
-          </select>
+          <div className="absolute top-6 right-6">
+        <select
+          onChange={(e) => changeLanguage(e.target.value)}
+          value={i18n.language}
+          className="px-4 py-2 border rounded-md bg-white shadow-sm text-gray-800"
+        >
+          <option value="en">English</option>
+          <option value="sk">Slovenčina</option>
+        </select>
+        </div>
         </nav>
 
         {/* Mobile Menu Button */}

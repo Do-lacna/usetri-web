@@ -1,14 +1,15 @@
 {
-  "save_money": "Šetrite svoje peniaze s každým nákupom",
-  "compare_prices": "Compare grocery prices across Slovakia",
-  "description": "usetri.sk finds the best deals on groceries by comparing prices at multiple supermarkets in real-time.",
-  "download_now": "Download Now",
-  "learn_more": "Learn More",
+  "save_money": "Ušetrite peniaze pri každom nákupe",
+  "compare_prices": "Porovnajte ceny potravín",
+  "across_slovakia": "naprieč Slovenskom",
+  "description": "usetri.sk nájde najlepšie ponuky na potraviny porovnaním cien v rôznych supermarketoch v reálnom čase.",
+  "download_now": "Stiahnuť teraz",
+  "learn_more": "Viac informácií",
   "supermarkets_count": "15+",
-  "supermarkets_label": "Supermarkets",
-  "products_count": "1000s",
-  "products_label": "Products",
+  "supermarkets": "Supermarketov",
+  "products_count": "1000ky",
+  "products": "Produktov",
   "savings_percentage": "20%",
-  "savings_label": "Avg. Savings",
-  "scroll_explore": "Scroll to explore"
+  "avg_savings": "Priemerne ušetríte",
+  "scroll_to_explore": "Scrollnite pre viac"
 }
