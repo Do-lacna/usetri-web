@@ -11,5 +11,14 @@
   "products": "Produktov",
   "savings_percentage": "20%",
   "avg_savings": "Priemerne ušetríte",
-  "scroll_to_explore": "Scrollnite pre viac"
+  "scroll_to_explore": "Scrollnite pre viac",
+  "features": "Funkcie",
+  "how_it_works": "Ako to funguje",
+  "premium": "Prémium",
+  "download_app": "Stiahnuť aplikáciu",
+  "toggle_menu": "Prepínať menu",
+  "language": {
+    "english": "Anglicky (English)",
+    "slovak": "Slovensky (Slovenčina)"
+  }
 }

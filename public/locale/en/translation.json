@@ -11,5 +11,14 @@
   "products": "Products",
   "savings_percentage": "20%",
   "avg_savings": "Avg. Savings",
-  "scroll_to_explore": "Scroll to explore"
+  "scroll_to_explore": "Scroll to explore",
+  "features": "Features",
+  "how_it_works": "How It Works",
+  "premium": "Premium",
+  "download_app": "Download App",
+  "toggle_menu": "Toggle menu",
+  "language": {
+    "english": "English (English)",
+    "slovak": "Slovak (Slovenčina)"
+  }
 }

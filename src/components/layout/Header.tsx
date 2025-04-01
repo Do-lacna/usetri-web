@@ -7,7 +7,7 @@ import { useTranslation } from 'react-i18next';
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const { i18n } = useTranslation();
+  const { t, i18n } = useTranslation();
 
   // Track scroll position for header styling
   useEffect(() => {
@@ -42,44 +42,37 @@ const Header = () => {
 
         {/* Desktop Navigation */}
         <nav className="hidden md:flex items-center space-x-8">
-          <a
-            href="#features"
-            className="text-foreground hover:text-brand-accent transition-colors"
-          >
-            Features
+          <a href="#features" className="text-foreground hover:text-brand-accent transition-colors">
+            {t('features')}
           </a>
-          <a
-            href="#how-it-works"
-            className="text-foreground hover:text-brand-accent transition-colors"
-          >
-            How It Works
+          <a href="#how-it-works" className="text-foreground hover:text-brand-accent transition-colors">
+            {t('how_it_works')}
           </a>
-          <a
-            href="#premium"
-            className="text-foreground hover:text-brand-accent transition-colors"
-          >
-            Premium
+          <a href="#premium" className="text-foreground hover:text-brand-accent transition-colors">
+            {t('premium')}
           </a>
           <Button className="bg-brand-dark text-white hover:bg-brand-accent hover:text-brand-dark transition-all">
-            Download App
+            {t('download_app')}
           </Button>
+          
+          {/* Language Selector */}
           <div className="absolute top-6 right-6">
-        <select
-          onChange={(e) => changeLanguage(e.target.value)}
-          value={i18n.language}
-          className="px-4 py-2 border rounded-md bg-white shadow-sm text-gray-800"
-        >
-          <option value="en">English</option>
-          <option value="sk">Slovenčina</option>
-        </select>
-        </div>
+            <select
+              onChange={(e) => changeLanguage(e.target.value)}
+              value={i18n.language}
+              className="px-4 py-2 border rounded-md bg-white shadow-sm text-gray-800"
+            >
+              <option value="en">{t('language.english')}</option>
+              <option value="sk">{t('language.slovak')}</option>
+            </select>
+          </div>
         </nav>
 
         {/* Mobile Menu Button */}
         <button
           className="md:hidden text-foreground"
           onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-          aria-label="Toggle menu"
+          aria-label={t('toggle_menu')}
         >
           {mobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
         </button>
@@ -89,32 +82,17 @@ const Header = () => {
       {mobileMenuOpen && (
         <div className="md:hidden absolute top-full left-0 right-0 bg-white/95 backdrop-blur-lg shadow-lg animate-slide-down">
           <div className="px-4 py-6 space-y-4">
-            <a
-              href="#features"
-              className="block py-2 text-foreground hover:text-brand-accent transition-colors"
-              onClick={() => setMobileMenuOpen(false)}
-            >
-              Features
+            <a href="#features" className="block py-2 text-foreground hover:text-brand-accent transition-colors" onClick={() => setMobileMenuOpen(false)}>
+              {t('features')}
             </a>
-            <a
-              href="#how-it-works"
-              className="block py-2 text-foreground hover:text-brand-accent transition-colors"
-              onClick={() => setMobileMenuOpen(false)}
-            >
-              How It Works
+            <a href="#how-it-works" className="block py-2 text-foreground hover:text-brand-accent transition-colors" onClick={() => setMobileMenuOpen(false)}>
+              {t('how_it_works')}
             </a>
-            <a
-              href="#premium"
-              className="block py-2 text-foreground hover:text-brand-accent transition-colors"
-              onClick={() => setMobileMenuOpen(false)}
-            >
-              Premium
+            <a href="#premium" className="block py-2 text-foreground hover:text-brand-accent transition-colors" onClick={() => setMobileMenuOpen(false)}>
+              {t('premium')}
             </a>
-            <Button
-              className="w-full bg-brand-dark text-white hover:bg-brand-accent hover:text-brand-dark transition-all"
-              onClick={() => setMobileMenuOpen(false)}
-            >
-              Download App
+            <Button className="w-full bg-brand-dark text-white hover:bg-brand-accent hover:text-brand-dark transition-all" onClick={() => setMobileMenuOpen(false)}>
+              {t('download_app')}
             </Button>
           </div>
         </div>
