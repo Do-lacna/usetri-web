@@ -1,7 +1,9 @@
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 import { Facebook, Twitter, Instagram, Mail } from 'lucide-react';
 
 const Footer = () => {
+  const { t } = useTranslation();
   const currentYear = new Date().getFullYear();
 
   return (
@@ -12,9 +14,7 @@ const Footer = () => {
             <div className="text-2xl font-bold mb-4">
               usetri<span className="text-brand-accent">.sk</span>
             </div>
-            <p className="text-white/70 mb-6">
-              Helping you save money on groceries across Slovakia.
-            </p>
+            <p className="text-white/70 mb-6">{t('footer.description')}</p>
             <div className="flex space-x-4">
               <a
                 href="#"
@@ -49,7 +49,7 @@ const Footer = () => {
 
           <div>
             <h3 className="text-lg font-medium mb-4 text-brand-accent">
-              Company
+              {t('footer.company')}
             </h3>
             <ul className="space-y-3">
               <li>
@@ -57,7 +57,7 @@ const Footer = () => {
                   href="#"
                   className="text-white/70 hover:text-white transition-colors"
                 >
-                  About Us
+                  {t('footer.aboutUs')}
                 </a>
               </li>
               <li>
@@ -65,7 +65,7 @@ const Footer = () => {
                   href="#"
                   className="text-white/70 hover:text-white transition-colors"
                 >
-                  Careers
+                  {t('footer.careers')}
                 </a>
               </li>
               <li>
@@ -73,7 +73,7 @@ const Footer = () => {
                   href="#"
                   className="text-white/70 hover:text-white transition-colors"
                 >
-                  Press
+                  {t('footer.press')}
                 </a>
               </li>
               <li>
@@ -81,7 +81,7 @@ const Footer = () => {
                   href="#"
                   className="text-white/70 hover:text-white transition-colors"
                 >
-                  Contact
+                  {t('footer.contact')}
                 </a>
               </li>
             </ul>
@@ -89,7 +89,7 @@ const Footer = () => {
 
           <div>
             <h3 className="text-lg font-medium mb-4 text-brand-accent">
-              Resources
+              {t('footer.resources')}
             </h3>
             <ul className="space-y-3">
               <li>
@@ -97,7 +97,7 @@ const Footer = () => {
                   href="#"
                   className="text-white/70 hover:text-white transition-colors"
                 >
-                  Help Center
+                  {t('footer.helpCenter')}
                 </a>
               </li>
               <li>
@@ -105,7 +105,7 @@ const Footer = () => {
                   href="#"
                   className="text-white/70 hover:text-white transition-colors"
                 >
-                  Privacy Policy
+                  {t('footer.privacyPolicy')}
                 </a>
               </li>
               <li>
@@ -113,7 +113,7 @@ const Footer = () => {
                   href="#"
                   className="text-white/70 hover:text-white transition-colors"
                 >
-                  Terms of Service
+                  {t('footer.termsOfService')}
                 </a>
               </li>
               <li>
@@ -121,7 +121,7 @@ const Footer = () => {
                   href="#"
                   className="text-white/70 hover:text-white transition-colors"
                 >
-                  Cookie Settings
+                  {t('footer.cookieSettings')}
                 </a>
               </li>
             </ul>
@@ -129,7 +129,7 @@ const Footer = () => {
 
           <div>
             <h3 className="text-lg font-medium mb-4 text-brand-accent">
-              Get The App
+              {t('footer.getTheApp')}
             </h3>
             <ul className="space-y-3">
               <li>
@@ -137,7 +137,7 @@ const Footer = () => {
                   href="#"
                   className="text-white/70 hover:text-white transition-colors"
                 >
-                  App Store
+                  {t('footer.appStore')}
                 </a>
               </li>
               <li>
@@ -145,7 +145,7 @@ const Footer = () => {
                   href="#"
                   className="text-white/70 hover:text-white transition-colors"
                 >
-                  Google Play
+                  {t('footer.googlePlay')}
                 </a>
               </li>
               <li>
@@ -153,7 +153,7 @@ const Footer = () => {
                   href="#"
                   className="text-white/70 hover:text-white transition-colors"
                 >
-                  Features
+                  {t('footer.features')}
                 </a>
               </li>
               <li>
@@ -161,7 +161,7 @@ const Footer = () => {
                   href="#"
                   className="text-white/70 hover:text-white transition-colors"
                 >
-                  Premium Benefits
+                  {t('footer.premiumBenefits')}
                 </a>
               </li>
             </ul>
@@ -170,17 +170,17 @@ const Footer = () => {
 
         <div className="border-t border-white/10 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center">
           <div className="text-white/50 text-sm">
-            © {currentYear} usetri.sk. All rights reserved.
+            © {currentYear} usetri.sk. {t('footer.allRightsReserved')}
           </div>
           <div className="mt-4 md:mt-0 flex space-x-6">
             <a href="#" className="text-white/50 hover:text-white text-sm">
-              Privacy Policy
+              {t('footer.privacyPolicy')}
             </a>
             <a href="#" className="text-white/50 hover:text-white text-sm">
-              Terms of Service
+              {t('footer.termsOfService')}
             </a>
             <a href="#" className="text-white/50 hover:text-white text-sm">
-              Cookie Policy
+              {t('footer.cookiePolicy')}
             </a>
           </div>
         </div>

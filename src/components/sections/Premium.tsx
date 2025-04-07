@@ -1,8 +1,11 @@
 import React, { useEffect } from 'react';
+import { useTranslation } from 'react-i18next';
 import { Check, X } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 
 const Premium = () => {
+  const { t } = useTranslation();
+
   useEffect(() => {
     const observer = new IntersectionObserver(
       (entries) => {
@@ -23,34 +26,34 @@ const Premium = () => {
 
   const plans = [
     {
-      name: 'Free',
+      name: t('premium.plans.free.name'),
       price: '€0',
-      description: 'Basic price comparison',
+      description: t('premium.plans.free.description'),
       features: [
-        { name: 'Search & compare prices', included: true },
-        { name: 'View up to 5 products per day', included: true },
-        { name: 'Basic price history (7 days)', included: true },
-        { name: 'Shopping list feature', included: false },
-        { name: 'Deal alerts', included: false },
-        { name: 'Ad-free experience', included: false },
+        { name: t('premium.features.searchCompare'), included: true },
+        { name: t('premium.features.limitedViews'), included: true },
+        { name: t('premium.features.basicHistory'), included: true },
+        { name: t('premium.features.shoppingList'), included: false },
+        { name: t('premium.features.dealAlerts'), included: false },
+        { name: t('premium.features.adFree'), included: false },
       ],
-      cta: 'Download Free',
+      cta: t('premium.plans.free.cta'),
       highlighted: false,
     },
     {
-      name: 'Premium',
+      name: t('premium.plans.premium.name'),
       price: '€2.99',
-      period: 'per month',
-      description: 'Advanced shopping experience',
+      period: t('premium.plans.premium.period'),
+      description: t('premium.plans.premium.description'),
       features: [
-        { name: 'Unlimited product searches', included: true },
-        { name: 'Full price history (90 days)', included: true },
-        { name: 'Smart shopping lists', included: true },
-        { name: 'Deal alerts for any product', included: true },
-        { name: 'Store recommendations', included: true },
-        { name: 'Ad-free experience', included: true },
+        { name: t('premium.features.unlimitedSearches'), included: true },
+        { name: t('premium.features.fullHistory'), included: true },
+        { name: t('premium.features.smartLists'), included: true },
+        { name: t('premium.features.fullAlerts'), included: true },
+        { name: t('premium.features.recommendations'), included: true },
+        { name: t('premium.features.adFree'), included: true },
       ],
-      cta: 'Get Premium',
+      cta: t('premium.plans.premium.cta'),
       highlighted: true,
     },
   ];
@@ -63,11 +66,13 @@ const Premium = () => {
       <div className="section-container">
         <div className="text-center max-w-3xl mx-auto mb-16 reveal-animation">
           <h2 className="text-3xl md:text-4xl font-bold mb-4 text-brand-dark">
-            Unlock the <span className="text-brand-accent">Full Potential</span>
+            {t('premium.heading')}{' '}
+            <span className="text-brand-accent">
+              {t('premium.headingAccent')}
+            </span>
           </h2>
           <p className="text-lg text-muted-foreground">
-            Our premium subscription unlocks powerful features to maximize your
-            savings on every shopping trip.
+            {t('premium.subheading')}
           </p>
         </div>
 
@@ -83,11 +88,13 @@ const Premium = () => {
               style={{ animationDelay: `${i * 0.2}s` }}
             >
               {plan.highlighted && (
-                <div className="pricing-badge">Recommended</div>
+                <div className="pricing-badge">{t('premium.recommended')}</div>
               )}
               <div className="p-8">
                 <h3
-                  className={`text-2xl font-bold mb-2 ${plan.highlighted ? 'text-brand-accent' : 'text-brand-dark'}`}
+                  className={`text-2xl font-bold mb-2 ${
+                    plan.highlighted ? 'text-brand-accent' : 'text-brand-dark'
+                  }`}
                 >
                   {plan.name}
                 </h3>
@@ -95,14 +102,20 @@ const Premium = () => {
                   <span className="text-4xl font-bold">{plan.price}</span>
                   {plan.period && (
                     <span
-                      className={`ml-1 pb-1 ${plan.highlighted ? 'text-white/80' : 'text-muted-foreground'}`}
+                      className={`ml-1 pb-1 ${
+                        plan.highlighted
+                          ? 'text-white/80'
+                          : 'text-muted-foreground'
+                      }`}
                     >
                       {plan.period}
                     </span>
                   )}
                 </div>
                 <p
-                  className={`mb-6 ${plan.highlighted ? 'text-white/80' : 'text-muted-foreground'}`}
+                  className={`mb-6 ${
+                    plan.highlighted ? 'text-white/80' : 'text-muted-foreground'
+                  }`}
                 >
                   {plan.description}
                 </p>
@@ -145,7 +158,7 @@ const Premium = () => {
         </div>
 
         <div className="mt-12 text-center text-muted-foreground reveal-animation">
-          <p>All plans come with a 7-day free trial. Cancel anytime.</p>
+          <p>{t('premium.trialNote')}</p>
         </div>
       </div>
     </section>

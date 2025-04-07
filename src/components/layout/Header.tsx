@@ -42,19 +42,28 @@ const Header = () => {
 
         {/* Desktop Navigation */}
         <nav className="hidden md:flex items-center space-x-8">
-          <a href="#features" className="text-foreground hover:text-brand-accent transition-colors">
-            {t('features')}
+          <a
+            href="#features_header"
+            className="text-foreground hover:text-brand-accent transition-colors"
+          >
+            {t('features_header')}
           </a>
-          <a href="#how-it-works" className="text-foreground hover:text-brand-accent transition-colors">
+          <a
+            href="#how-it-works"
+            className="text-foreground hover:text-brand-accent transition-colors"
+          >
             {t('how_it_works')}
           </a>
-          <a href="#premium" className="text-foreground hover:text-brand-accent transition-colors">
-            {t('premium')}
+          <a
+            href="#premium_header"
+            className="text-foreground hover:text-brand-accent transition-colors"
+          >
+            {t('premium_header')}
           </a>
           <Button className="bg-brand-dark text-white hover:bg-brand-accent hover:text-brand-dark transition-all">
             {t('download_app')}
           </Button>
-          
+
           {/* Language Selector */}
           <div className="absolute top-6 right-6">
             <select
@@ -82,16 +91,31 @@ const Header = () => {
       {mobileMenuOpen && (
         <div className="md:hidden absolute top-full left-0 right-0 bg-white/95 backdrop-blur-lg shadow-lg animate-slide-down">
           <div className="px-4 py-6 space-y-4">
-            <a href="#features" className="block py-2 text-foreground hover:text-brand-accent transition-colors" onClick={() => setMobileMenuOpen(false)}>
-              {t('features')}
+            <a
+              href="#features_header"
+              className="block py-2 text-foreground hover:text-brand-accent transition-colors"
+              onClick={() => setMobileMenuOpen(false)}
+            >
+              {t('features_header')}
             </a>
-            <a href="#how-it-works" className="block py-2 text-foreground hover:text-brand-accent transition-colors" onClick={() => setMobileMenuOpen(false)}>
+            <a
+              href="#how-it-works"
+              className="block py-2 text-foreground hover:text-brand-accent transition-colors"
+              onClick={() => setMobileMenuOpen(false)}
+            >
               {t('how_it_works')}
             </a>
-            <a href="#premium" className="block py-2 text-foreground hover:text-brand-accent transition-colors" onClick={() => setMobileMenuOpen(false)}>
-              {t('premium')}
+            <a
+              href="#premium_header"
+              className="block py-2 text-foreground hover:text-brand-accent transition-colors"
+              onClick={() => setMobileMenuOpen(false)}
+            >
+              {t('premium_header')}
             </a>
-            <Button className="w-full bg-brand-dark text-white hover:bg-brand-accent hover:text-brand-dark transition-all" onClick={() => setMobileMenuOpen(false)}>
+            <Button
+              className="w-full bg-brand-dark text-white hover:bg-brand-accent hover:text-brand-dark transition-all"
+              onClick={() => setMobileMenuOpen(false)}
+            >
               {t('download_app')}
             </Button>
           </div>
