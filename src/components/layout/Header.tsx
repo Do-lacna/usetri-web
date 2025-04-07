@@ -65,7 +65,7 @@ const Header = () => {
           </Button>
 
           {/* Language Selector */}
-          <div className="absolute top-6 right-6">
+          <div className="text-foreground hover:text-brand-accent transition-colors">
             <select
               onChange={(e) => changeLanguage(e.target.value)}
               value={i18n.language}

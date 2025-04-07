@@ -5,9 +5,9 @@
   "description": "usetri.sk finds the best deals on groceries by comparing prices at multiple supermarkets in real-time.",
   "download_now": "Download Now",
   "learn_more": "Learn More",
-  "supermarkets_count": "15+",
+  "supermarkets_count": "5+",
   "supermarkets": "Supermarkets",
-  "products_count": "1000s",
+  "products_count": "100s",
   "products": "Products",
   "savings_percentage": "20%",
   "avg_savings": "Avg. Savings",
@@ -25,7 +25,7 @@
   "features": {
     "heading": "Every Feature You Need to",
     "headingAccent": "Save Money",
-    "subheading": "Our app is designed to make grocery shopping more efficient and economical, with powerful tools to help you maximize your savings.",
+    "subheading": "Our app is designed to make grocery shopping more efficient and economical, with smart tools to help you maximize your savings.",
     "searchCompare": {
       "title": "Search & Compare",
       "description": "Easily search for products and compare prices across multiple supermarkets in Slovakia."

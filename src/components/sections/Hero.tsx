@@ -1,12 +1,15 @@
 import React, { useEffect, useRef } from 'react';
 import { useTranslation } from 'react-i18next';
-import { ChevronDown, ShoppingCart, CircleDollarSign } from 'lucide-react';
+import { ChevronDown } from 'lucide-react';
 import { Button } from '@/components/ui/button';
-import { cn } from '@/lib/utils';
 
 const Hero = () => {
   const { t } = useTranslation();
   const phoneRef = useRef<HTMLDivElement>(null);
+
+  const supermarketsCount = 5;
+  const productsCount = 1000;
+  const avgSavings = 20;
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -61,17 +64,23 @@ const Hero = () => {
 
           <div className="flex items-center gap-x-8 pt-6">
             <div className="flex flex-col">
-              <span className="text-3xl font-bold text-brand-dark">15+</span>
+              <span className="text-3xl font-bold text-brand-dark">
+                {supermarketsCount}+
+              </span>
               <span className="text-muted-foreground">{t('supermarkets')}</span>
             </div>
             <div className="w-px h-10 bg-border"></div>
             <div className="flex flex-col">
-              <span className="text-3xl font-bold text-brand-dark">1000s</span>
+              <span className="text-3xl font-bold text-brand-dark">
+                {productsCount}
+              </span>
               <span className="text-muted-foreground">{t('products')}</span>
             </div>
             <div className="w-px h-10 bg-border"></div>
             <div className="flex flex-col">
-              <span className="text-3xl font-bold text-brand-dark">20%</span>
+              <span className="text-3xl font-bold text-brand-dark">
+                {avgSavings}%
+              </span>
               <span className="text-muted-foreground">{t('avg_savings')}</span>
             </div>
           </div>
@@ -79,13 +88,13 @@ const Hero = () => {
 
         <div
           ref={phoneRef}
-          className="relative h-[600px] w-full max-w-[300px] mx-auto md:mx-0 md:ml-auto reveal-animation"
+          className="relative h-[900px] w-full max-w-[450px] mx-auto md:mx-0 md:ml-auto reveal-animation"
         >
-          <img src="public\images\search2.png"></img>
+          <img src="public\images\Black-Titanium.png"></img>
         </div>
 
         {/* Scroll Indicator */}
-        <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 flex flex-col items-center animate-bounce">
+        <div className="absolute bottom-40 left-1/2 transform -translate-x-1/2 flex flex-col items-center animate-bounce">
           <span className="text-sm font-medium mb-2 text-brand-dark">
             {t('scroll_to_explore')}
           </span>

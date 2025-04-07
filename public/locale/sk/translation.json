@@ -5,9 +5,9 @@
   "description": "usetri.sk nájde najlepšie ponuky na potraviny porovnaním cien v rôznych supermarketoch v reálnom čase.",
   "download_now": "Stiahnuť teraz",
   "learn_more": "Viac informácií",
-  "supermarkets_count": "15+",
+  "supermarkets_count": "5+",
   "supermarkets": "Supermarketov",
-  "products_count": "1000ky",
+  "products_count": "100ky",
   "products": "Produktov",
   "savings_percentage": "20%",
   "avg_savings": "Priemerne ušetríte",
@@ -25,7 +25,7 @@
   "features": {
     "heading": "Každá funkcia, ktorú potrebujete na",
     "headingAccent": "Ušetrenie peňazí",
-    "subheading": "Naša aplikácia je navrhnutá tak, aby bola nákup potravín efektívnejší a úspornejší, s výkonnými nástrojmi, ktoré vám pomôžu maximalizovať úspory.",
+    "subheading": "Naša aplikácia je navrhnutá tak, aby bol nákup potravín efektívnejší a úspornejší, s chytr7mi nástrojmi, ktoré vám pomôžu maximalizovať úspory.",
     "searchCompare": {
       "title": "Vyhľadávanie a porovnanie",
       "description": "Jednoducho vyhľadajte produkty a porovnajte ceny v rôznych supermarketoch na Slovensku."
@@ -88,8 +88,8 @@
 
   "download": {
     "heading": "Začnite šetriť na svojich",
-    "headingAccent": "nákupoch potravín",
-    "subheading": "Stiahnite si usetri.sk teraz a pridajte sa k tisícom šikovných nakupujúcich, ktorí už šetria na svojich nákupoch potravín po celom Slovensku.",
+    "headingAccent": "nákupoch",
+    "subheading": "Stiahnite si usetri.sk teraz a pridajte sa k šikovným nakupujúcim, ktorí už šetria na svojich nákupoch potravín po celom Slovensku.",
     "appStore": "App Store",
     "googlePlay": "Google Play",
     "joinedBy": "Pripojili sa k nám",

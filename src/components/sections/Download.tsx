@@ -75,14 +75,11 @@ const Download = () => {
 
           <div className="md:w-1/2 relative reveal-animation">
             <div className="relative max-w-[280px] mx-auto">
-              <div className="absolute inset-0 bg-gradient-to-r from-brand-accent/40 to-brand-accent/20 rounded-[40px] blur-xl transform rotate-12 scale-105"></div>
-              <div className="relative rounded-[40px] border-[8px] border-black overflow-hidden bg-white">
-                <img
-                  src="https://placehold.co/600x1200/E6EEED/034F4A?text=usetri.sk+App"
-                  alt="usetri.sk app preview"
-                  className="w-full h-auto"
-                />
-              </div>
+              <img
+                src="/public/images/iMockup - iPhone 14.png"
+                alt="usetri.sk app preview"
+                className="w-full h-auto"
+              />
             </div>
           </div>
         </div>

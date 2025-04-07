@@ -88,7 +88,9 @@ const Premium = () => {
               style={{ animationDelay: `${i * 0.2}s` }}
             >
               {plan.highlighted && (
-                <div className="pricing-badge">{t('premium.recommended')}</div>
+                <div className="pricing-badge mt-7">
+                  {t('premium.recommended')}
+                </div>
               )}
               <div className="p-8">
                 <h3
@@ -147,7 +149,7 @@ const Premium = () => {
                   className={`w-full py-6 ${
                     plan.highlighted
                       ? 'bg-brand-accent text-brand-dark hover:bg-white hover:text-brand-dark button-hover-effect'
-                      : 'border border-brand-dark text-brand-dark hover:bg-brand-dark hover:text-white'
+                      : 'border border-brand-dark text-white hover:bg-brand-dark hover:text-brand-accent'
                   }`}
                 >
                   {plan.cta}
